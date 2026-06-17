@@ -1,0 +1,106 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/usa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 520px; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 20px; 
+  border-radius: 8px;
+  box-shadow: 40px 40px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.button {
+  background: linear-gradient(to right, #152e16, #58c65b, #152e16); /* Gradient background */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #58c65b, #152e16, #58c65b);
+}
+
+h1, h2, h3, p{
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Mobile Devices */
+.centered-container {   /* Use flexible layout */
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+input, select {   /* Make inputs mobile-friendly */
+  padding: 7px;
+}
+
+/* Password Strength */
+#passwordChecklist p {
+  margin: 2px 0;
+  font-size: 0.8em;
+}
+
+#strengthBarContainer {
+  width: 100%;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+#strengthBar {
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+/* Hover Over Password Eye Icon */
+.togglePassword {
+  cursor: pointer;   /* makes mouse turn into a hand */
+  user-select: none;  /* prevents highlighting the icon text */
+}
+
+.togglePassword:hover {
+  color: #007bff;       /* changes color on hover */
+  transform: scale(1.1);  /* slight zoom effect */
+  transition: 0.2s ease;
+}
+
+/* Required fields */
+.required {
+  color: red;
+  font-weight: bold;
+}

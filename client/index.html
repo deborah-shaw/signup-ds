@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Sign Up Page </title>
+  <link href="css/style.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div class="centered-container">
+
+    <h1> Sign Up </h1>
+
+    <form id="signupForm">
+      <p>First Name: <input type="text" name="fName"></p>
+      <p>Last Name: <input type="text" name="lName"></p>
+
+      <p>Gender:
+        <input type="radio" id="Male" name="gender" value="m"><label for="Male">Male</label>
+        <input type="radio" id="Female" name="gender" value="f"><label for="Female">Female</label>
+      </p>
+
+      <p>Zip Code: <input type="text" id="zip" name="zip"><span id="zipError"></span></p>
+
+      <p>City: <span id="city"></span></p>
+
+      <p>Latitude: <span id="latitude"></span></p>
+
+      <p>Longitude: <span id="longitude"></span></p>
+
+      <p>State:
+        <select id="state" name="state">
+          <option>Select One</option>
+        </select>
+      </p>
+
+      <p>Select a County: <select id="county"></select></p>
+
+      <p>Username: <input type="text" id="username" name="username"><span class="required">*</span></p>
+      <p id="usernameError"></p>
+
+      <p>Email: <input type="email" id="email"><span class="required">*</span></p>
+      <p id="emailError"></p>
+
+      <p>Password: <input type="password" id="password"><span class="required">*</span><span class="togglePassword" data-target="password">👁</span></p>
+      <p id="passwordRule"></p>
+      <div id="passwordChecklist">
+        <p id="length">❌ At least 8 characters</p>
+        <p id="uppercase">❌ At least 1 uppercase letter</p>
+        <p id="lowercase">❌ At least 1 lowercase letter</p>
+        <p id="number">❌ At least 1 number</p>
+        <p id="special">❌ At least 1 special character</p>
+        <p id="nospace">❌ No spaces</p>
+      </div>
+      <div id="strengthBarContainer">
+        <div id="strengthBar"></div>
+      </div>
+
+      <p>Re-enter Password: <input type="password" id="passwordMatch"><span class="required">*</span><span class="togglePassword" data-target="passwordMatch">👁</span></p>
+      <p id="invalidPasswordMatch"></p>
+
+      <p id="serverError"></p>
+
+      <input class="button" type="submit" value="Sign up!">
+
+      <p>Already have an account?<a href="login.html">Login here</a></p>
+    </form>
+
+    <script src="js/index.js"></script>
+
+  </div>
+
+</body>
+
+</html>
