@@ -19,7 +19,7 @@ async function loginUser(e) {
 
   document.querySelector("#loginError").innerHTML = "";
 
-  let response = await fetch("http://localhost:3000/login", {
+  let response = await fetch("https://signup-ds.onrender.com/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

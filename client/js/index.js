@@ -74,7 +74,7 @@ async function checkUsername() {
   document.querySelector("#usernameError").innerHTML = "";
   let username = document.querySelector("#username").value;
   if(!username) return false;
-  let response = await fetch(`http://localhost:3000/check-username?username=${username}`);
+  let response = await fetch(`https://signup-ds.onrender.com/check-username?username=${username}`);
   let data = await response.json()
   if (data.available) {
     document.querySelector("#usernameError").innerHTML = "Username is available";
@@ -93,7 +93,7 @@ async function checkEmail() {
   document.querySelector("#emailError").innerHTML = "";
   let email = document.querySelector("#email").value;
   if(!email) return false;
-  let response = await fetch(`http://localhost:3000/check-email?email=${email}`);
+  let response = await fetch(`https://signup-ds.onrender.com/check-email?email=${email}`);
   let data = await response.json()
   if (data.available) {
     document.querySelector("#emailError").innerHTML = "Email is available";
@@ -210,7 +210,7 @@ async function validateForm(e) {
   if (!isValid) return;
 
   // Send data to backend
-  let response = await fetch("http://localhost:3000/signup", {
+  let response = await fetch("https://signup-ds.onrender.com/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

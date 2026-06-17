@@ -8,7 +8,7 @@ if (!token) {
 
 // Display user data
 async function loadProfile() {
-    let response = await fetch("http://localhost:3000/profile", {
+    let response = await fetch("https://signup-ds.onrender.com/profile", {
         headers: {
             "Authorization": "Bearer " + token
         }
